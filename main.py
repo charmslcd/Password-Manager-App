@@ -16,9 +16,9 @@ def find_password():
             username = (data[website.lower()]["email"])
             password = (data[website.lower()]["password"])
     except KeyError:
-        messagebox.showinfo(title="Not Found", message="No details for the website exists.")
+        messagebox.showinfo(title=website, message="No details for the website exists.")
     except FileNotFoundError:
-        messagebox.showinfo(title="Not Found", message="No Data File Found")
+        messagebox.showinfo(title=website, message="No Data File Found")
     else:
         messagebox.showinfo(title="Found", message=f"Email: {username}\n"
                                                    f"Password: {password}")
